@@ -12,7 +12,7 @@ def detail(request, album_id):
     return render(request, "music/detail.html", {"album": album})
 
 def favorite(request, album_id):
-    album = get_objects.get(pk=album_id)
+    album = Album.objects.get(pk=album_id)
     try:
         selected_song = album.song_set.get(pk=request.POST['song'])
     except (KeyError, Song.DoesNotExist):
