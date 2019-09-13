@@ -26,3 +26,4 @@ def favorite(request, album_id):
         selected_song.save()
         return render(request, "music/detail.html", {"album": album})
 
+#jglkjglkcjgfhlg
